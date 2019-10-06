@@ -29,7 +29,6 @@ public class Main extends Application {
     } // end try catch
   } // end start method
 
-
   public static void main(String[] args) {
     launch(args);
   }

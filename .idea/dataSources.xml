@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ProdDB" uuid="e3bd7b6c-984f-4329-acc1-f12266d44aae">
+    <data-source source="LOCAL" name="ProdDB" uuid="b6df5c21-77fe-4cb9-a21c-2b6722a4f8be">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>

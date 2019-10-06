@@ -17,15 +17,12 @@ import javafx.scene.control.TextField;
  */
 public class Controller {
 
-  @FXML
-  private TextField productNameTxt;
-  @FXML
-  private TextField manufacturerTxt;
-  @FXML
-  private Button productLineBtn;
-  @FXML
-  private ChoiceBox<String> itemTypeChb;
-  private final String[] itemTypes = {"Audio", "Visual", "AudioMobile", "VisualMobile"};
+  @FXML private TextField productNameTxt;
+  @FXML private TextField manufacturerTxt;
+  @FXML private Button productLineBtn;
+  @FXML private ChoiceBox<String> itemTypeChb;
+  private itemType[] itemTypes = itemType.values();
+
   @FXML
   // Combo box for the produce tab.
   private ComboBox<Integer> chQntCb;
@@ -45,13 +42,13 @@ public class Controller {
 
     setChQntCb();
 
-    //showProducts();
+    // showProducts();
 
   }
 
   /**
    * initializeDatabase sets up the connection to the H2 product database. Since this connection is
-   * made at the beginning, multiple  queries can be made without creating another connection.
+   * made at the beginning, multiple queries can be made without creating another connection.
    */
   private void initializeDatabase() {
     String path = "jdbc:h2:./res/ProdDB";
@@ -70,8 +67,7 @@ public class Controller {
 
   /**
    * addProd method is used to insert products into the database. This is done through the UI by
-   * extracting the values for the textfields and choice box and using them in a prepared
-   * statement.
+   * extracting the values for the textfields and choice box and using them in a prepared statement.
    *
    * @param addProdEvent Signals a button event for the setOnAction method
    */
@@ -87,7 +83,7 @@ public class Controller {
 
       String query = "INSERT INTO PRODUCT(NAME,TYPE,MANUFACTURER)" + " VALUES (?,?,?)";
 
-      // Bug says the statement may not be closed in the event of an error.
+      // Bug says the statement may not be closed in the event of an exception.
       pstmtUpdate = conn.prepareStatement(query);
 
       pstmtUpdate.setString(1, prodName);
@@ -121,9 +117,10 @@ public class Controller {
    * @param types Takes an array of strings to assign to the choice box.
    * @param cb The choice box is passed so that it can use the data in the array.
    */
-  private void setItemTypeChb(String[] types, ChoiceBox<String> cb) {
-    for (String type : types) {
-      cb.getItems().add(type);
+  private void setItemTypeChb(itemType[] types, ChoiceBox<String> cb) {
+    for (itemType type : types) {
+      String iType = type.toString();
+      cb.getItems().add(iType);
     }
   }
 
@@ -138,6 +135,4 @@ public class Controller {
     chQntCb.setEditable(true);
     chQntCb.getSelectionModel().selectFirst();
   }
-
-
 }
