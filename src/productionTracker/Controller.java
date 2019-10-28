@@ -1,14 +1,11 @@
-package sample;
+package productionTracker;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 /**
  * Controller class drives the program connecting the UI with general functionality.
@@ -19,6 +16,7 @@ public class Controller {
 
   @FXML private TextField productNameTxt;
   @FXML private TextField manufacturerTxt;
+  @FXML private TextArea productionLog;
   @FXML private Button productLineBtn;
   @FXML private ChoiceBox<String> itemTypeChb;
   private itemType[] itemTypes = itemType.values();
@@ -42,6 +40,7 @@ public class Controller {
 
     setChQntCb();
 
+    setProductionLog();
     // showProducts();
 
   }
@@ -134,5 +133,12 @@ public class Controller {
     }
     chQntCb.setEditable(true);
     chQntCb.getSelectionModel().selectFirst();
+  }
+
+  private void setProductionLog() {
+    int testNum = 10;
+    Product testProduct = new AudioPlayer("test", "ProductTesters", "WAV", "MP3");
+    ProductionRecord testRecord = new ProductionRecord(testProduct, testNum);
+    productionLog.setText(testRecord.toString(testProduct));
   }
 }

@@ -1,19 +1,27 @@
-package sample;
+package productionTracker;
 
 public abstract class Product implements Item {
 
   private int id;
-  private String type;
+  private itemType type;
   private String name;
   private String manufacturer;
 
-  Product(String name, String type, String manufacturer) {
+  Product(String name, itemType type, String manufacturer) {
     this.name = name;
     this.type = type;
     this.manufacturer = manufacturer;
   }
 
-  public int getId() {
+    public itemType getType() {
+        return type;
+    }
+
+    public void setType(itemType type) {
+        this.type = type;
+    }
+
+    public int getId() {
     return this.id;
   }
 
@@ -39,7 +47,7 @@ public abstract class Product implements Item {
 
   public String toString() {
     String data =
-        "name: " + this.name + "\nManufacturer: " + this.manufacturer + "\nType: " + this.type;
+        "name: " + this.name + "\nManufacturer: " + this.manufacturer + "\nType: " + this.type.toString();
     return data;
   }
 }
