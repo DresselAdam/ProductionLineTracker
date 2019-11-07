@@ -3,9 +3,14 @@ package productionTracker;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * Controller class drives the program connecting the UI with general functionality.
@@ -19,7 +24,14 @@ public class Controller {
   @FXML private TextArea productionLog;
   @FXML private Button productLineBtn;
   @FXML private ChoiceBox<String> itemTypeChb;
-  private itemType[] itemTypes = itemType.values();
+  @FXML private TableView<Product> productTable;
+  @FXML private TableColumn prodNameCol;
+  @FXML private TableColumn manCol;
+  @FXML private TableColumn itemTypeCol;
+  @FXML private ListView prodList;
+
+  private ItemType[] ItemTypes = ItemType.values();
+  private ObservableList<Product> productLine = FXCollections.observableArrayList();
 
   @FXML
   // Combo box for the produce tab.
@@ -32,7 +44,7 @@ public class Controller {
    * generated. All other methods are called from the initialize method.
    */
   public void initialize() {
-    setItemTypeChb(itemTypes, itemTypeChb);
+    setItemTypeChb(ItemTypes, itemTypeChb);
 
     initializeDatabase();
 
@@ -41,6 +53,8 @@ public class Controller {
     setChQntCb();
 
     setProductionLog();
+    setProductLine();
+    setProduceList();
     // showProducts();
 
   }
@@ -76,7 +90,9 @@ public class Controller {
     System.out.println("Inserting records into the table...");
     String prodName = productNameTxt.getText();
     String manufacturer = manufacturerTxt.getText();
-    String itemType = itemTypeChb.getValue();
+    String code = itemTypeChb.getValue();
+    Product addedProd = new Product(prodName, code, manufacturer);
+    productLine.add(addedProd);
     try {
       PreparedStatement pstmtUpdate;
 
@@ -87,7 +103,7 @@ public class Controller {
 
       pstmtUpdate.setString(1, prodName);
       pstmtUpdate.setString(2, manufacturer);
-      pstmtUpdate.setString(3, itemType);
+      pstmtUpdate.setString(3, code);
       pstmtUpdate.executeUpdate();
 
       pstmtUpdate.close();
@@ -96,19 +112,12 @@ public class Controller {
     }
   }
 
-  /*
-    private void showProducts() {
-      String query = "SELECT NAME, TYPE, MANUFACTURER FROM PRODUCT";
-      try {
-        rset = pstmtUpdate.executeQuery(query);
-        while (rset.next()) {
-          addProdTbv.getItems().add(rset.getString("name"));
-        }
-      } catch (Exception he) {
-        he.printStackTrace();
-      }
-    }
-  */
+  private void setProductLine() {
+      prodNameCol.setCellValueFactory(new PropertyValueFactory("name"));
+      manCol.setCellValueFactory(new PropertyValueFactory("manufacturer"));
+      itemTypeCol.setCellValueFactory(new PropertyValueFactory("type"));
+      productTable.setItems(productLine);
+  }
 
   /**
    * Sets the item types for the choice box in a for each loop.
@@ -116,10 +125,10 @@ public class Controller {
    * @param types Takes an array of strings to assign to the choice box.
    * @param cb The choice box is passed so that it can use the data in the array.
    */
-  private void setItemTypeChb(itemType[] types, ChoiceBox<String> cb) {
-    for (itemType type : types) {
-      String iType = type.toString();
-      cb.getItems().add(iType);
+  private void setItemTypeChb(ItemType[] types, ChoiceBox<String> cb) {
+    for (ItemType type : types) {
+      String code = type.code;
+      cb.getItems().add(code);
     }
   }
 
@@ -140,5 +149,9 @@ public class Controller {
     Product testProduct = new AudioPlayer("test", "ProductTesters", "WAV", "MP3");
     ProductionRecord testRecord = new ProductionRecord(testProduct, testNum);
     productionLog.setText(testRecord.toString(testProduct));
+  }
+
+  private void setProduceList() {
+      prodList.setItems(productLine);
   }
 }

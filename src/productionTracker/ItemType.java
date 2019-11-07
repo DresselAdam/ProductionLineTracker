@@ -1,6 +1,6 @@
 package productionTracker;
 
-public enum itemType {
+public enum ItemType {
   AUDIO("AU"),
   VISUAL("VI"),
   AUDIO_MOBILE("AM"),
@@ -8,7 +8,7 @@ public enum itemType {
 
   public final String code;
 
-  itemType(String code) {
+  ItemType(String code) {
     this.code = code;
   }
 }

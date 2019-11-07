@@ -45,11 +45,11 @@
                                     </children>
                                 </GridPane>
                                 <Label layoutX="72.0" layoutY="266.0" text="Existing Products" />
-                                <TableView layoutX="175.0" layoutY="266.0" prefHeight="200.0" prefWidth="272.0">
+                                <TableView layoutX="175.0" layoutY="266.0" prefHeight="200.0" prefWidth="272.0" fx:id="productTable">
                                     <columns>
-                                        <TableColumn prefWidth="93.99992370605469" text="Product Name" />
-                                        <TableColumn prefWidth="91.33331298828125" text="Manufacturer" />
-                                        <TableColumn prefWidth="84.0" text="Item Type" />
+                                        <TableColumn prefWidth="93.99992370605469" fx:id = "prodNameCol" text="Product Name" />
+                                        <TableColumn prefWidth="91.33331298828125" fx:id="manCol" text="Manufacturer" />
+                                        <TableColumn prefWidth="84.0" fx:id="itemTypeCol" text="Item Type" />
                                     </columns>
                                 </TableView>
                             </children>
@@ -61,7 +61,7 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
                                 <Label layoutX="31.0" layoutY="43.0" text="Choose Product" />
-                                <ListView layoutX="31.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" />
+                                <ListView layoutX="31.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" fx:id="prodList"/>
                                 <Label layoutX="339.0" layoutY="43.0" text="Choose Quantity" />
                                 <ComboBox fx:id="chQntCb" layoutX="308.0" layoutY="60.0" prefWidth="150.0" />
                                 <Button layoutX="325.0" layoutY="134.0" mnemonicParsing="false" text="Record Production" />

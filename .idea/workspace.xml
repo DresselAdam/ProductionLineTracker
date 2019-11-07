@@ -4,35 +4,17 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Sprint 1 features and functionality">
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/AudioPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/MonitorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/MoviePlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/ProductionRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/Screen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/ScreenSpec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/productionTracker/testMultimedia.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added multiple issues to remote repo">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/MultimediaControl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/itemType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/production_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProductionLineTracker/sample/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/res/ProdDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/res/ProdDB.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/ProdDB.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/res/ProdDB.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AudioPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MultimediaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/MultimediaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/itemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/itemType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/production_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/production_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/MoviePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/MoviePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/itemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/ItemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,6 +54,13 @@
         <item name="ProdDB" type="feb32156:DbDataSourceImpl" />
         <item name="PRODDB: database" type="2aa06773:H2ImplModel$Database" />
         <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ProdDB" type="feb32156:DbDataSourceImpl" />
+        <item name="PRODDB: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
+        <item name="PRODUCT: table" type="818c1b4a:H2ImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -132,15 +121,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            <state relative-caret-position="289">
+              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1245#1246#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1311#1312#0" expanded="true" />
+                <element signature="e#1335#1336#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="e#1390#1391#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1450#1451#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
+                <element signature="e#1585#1586#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1698#1699#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,85 +149,68 @@
         <entry file="file://$PROJECT_DIR$/src/productionTracker/Item.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-end-line="14" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/productionTracker/ProductionRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/productionTracker/ProductionRecord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
-              <folding>
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-                <element signature="e#1274#1275#0" expanded="true" />
-                <element signature="e#1324#1325#0" expanded="true" />
-                <element signature="e#1355#1356#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-                <element signature="e#1462#1463#0" expanded="true" />
-                <element signature="e#1499#1500#0" expanded="true" />
-                <element signature="e#1528#1529#0" expanded="true" />
-                <element signature="e#1582#1583#0" expanded="true" />
-                <element signature="e#1624#1625#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1688#1689#0" expanded="true" />
-                <element signature="e#1740#1741#0" expanded="true" />
-                <element signature="e#1782#1783#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCTIONRECORD">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="cb78df2c-cbf8-4523-91f7-fca3d9828ba7">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1471">
-              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Controller#0" />
+                <element signature="docComment;method#initialize#0;class#Controller#0" />
+                <element signature="docComment;method#initializeDatabase#0;class#Controller#0" />
+                <element signature="e#1845#1986#0" />
+                <element signature="e#2007#2041#0" />
+                <element signature="docComment;method#addProd#0;class#Controller#0" />
+                <element signature="docComment;method#setItemTypeChb#0;class#Controller#0" />
+                <element signature="method#setItemTypeChb#0;class#Controller#0" />
+                <element signature="e#3675#3744#1" />
+                <element signature="method#setChQntCb#0;class#Controller#0" />
+                <element signature="method#setProductionLog#0;class#Controller#0" />
+                <element signature="e#4784#4785#0" expanded="true" />
+                <element signature="e#4803#4804#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCT">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state projectRestartId="e628f3f2-b368-4c4d-85f7-484ca3f240a7">
+              <filtering />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="65" column="109" lean-forward="true" selection-start-line="65" selection-start-column="109" selection-end-line="65" selection-end-column="109" />
+            </state>
+          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/productionTracker/itemType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/AudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="306">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
               <folding>
                 <element signature="e#441#442#0" expanded="true" />
                 <element signature="e#477#478#0" expanded="true" />
@@ -248,8 +230,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="408">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -260,7 +242,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productionTracker/testMultimedia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
+            <state relative-caret-position="68">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
@@ -307,7 +289,14 @@
         <option value="$PROJECT_DIR$/src/sample/ProductionRecord.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/productionTracker/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/productionTracker/AudioPlayer.java" />
         <option value="$PROJECT_DIR$/src/productionTracker/ProductionRecord.java" />
+        <option value="$PROJECT_DIR$/src/productionTracker/Item.java" />
+        <option value="$PROJECT_DIR$/src/productionTracker/Main.java" />
+        <option value="$PROJECT_DIR$/src/productionTracker/ItemType.java" />
+        <option value="$PROJECT_DIR$/src/productionTracker/Product.java" />
+        <option value="$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml" />
+        <option value="$PROJECT_DIR$/src/productionTracker/Controller.java" />
       </list>
     </option>
   </component>
@@ -324,6 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,8 +337,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,7 +488,11 @@
       <workItem from="1571335533917" duration="20000" />
       <workItem from="1571363352228" duration="1467000" />
       <workItem from="1571692424062" duration="3446000" />
-      <workItem from="1572222901679" duration="5121000" />
+      <workItem from="1572222901679" duration="5509000" />
+      <workItem from="1572371184794" duration="3816000" />
+      <workItem from="1572979081913" duration="2610000" />
+      <workItem from="1572992346830" duration="365000" />
+      <workItem from="1573013979929" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="initial re-commit">
       <created>1568672701060</created>
@@ -536,11 +529,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569720954669</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added multiple issues to remote repo">
+      <created>1572228140530</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572228140530</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85818000" />
+    <option name="totallyTimeSpent" value="100118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,17 +553,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22186235" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Image Layers" order="6" />
+      <window_info anchor="top" id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22547974" />
+      <window_info id="Favorites" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Image Layers" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3197158" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -645,7 +646,8 @@
     <MESSAGE value="initial re-commit" />
     <MESSAGE value="Added UI for tabs" />
     <MESSAGE value="Sprint 1 features and functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 1 features and functionality" />
+    <MESSAGE value="Added multiple issues to remote repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added multiple issues to remote repo" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -681,114 +683,30 @@
     </entry>
     <entry file="das://e3bd7b6c-984f-4329-acc1-f12266d44aae/database/PRODDB/schema/PUBLIC/table/PRODUCT" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/console.sql" />
-    <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCT">
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/production_style.css" />
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/MonitorType.java" />
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/Screen.java" />
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/ScreenSpec.java" />
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/MultimediaControl.java" />
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/MoviePlayer.java" />
+    <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCTIONRECORD">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/production_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/MonitorType.java" />
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/Screen.java" />
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/ScreenSpec.java" />
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/MultimediaControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/MoviePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCTIONRECORD">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="cb78df2c-cbf8-4523-91f7-fca3d9828ba7">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/testMultimedia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1471">
-          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/Item.java">
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/ItemType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/itemType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productionTracker/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-          </folding>
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/productionTracker/AudioPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
           <folding>
             <element signature="e#441#442#0" expanded="true" />
             <element signature="e#477#478#0" expanded="true" />
@@ -804,27 +722,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/testMultimedia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="e628f3f2-b368-4c4d-85f7-484ca3f240a7">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/productionTracker/ProductionRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        <state relative-caret-position="391">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1274#1275#0" expanded="true" />
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1582#1583#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1585#1586#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/javafx-src.zip!/javafx/scene/control/ChoiceBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="87" column="65" lean-forward="true" selection-start-line="87" selection-start-column="65" selection-end-line="87" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/trackerFormat.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="65" column="109" lean-forward="true" selection-start-line="65" selection-start-column="109" selection-end-line="65" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productionTracker/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="54" column="23" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding>
+            <element signature="docComment;class#Controller#0" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" />
+            <element signature="docComment;method#initializeDatabase#0;class#Controller#0" />
+            <element signature="e#1845#1986#0" />
+            <element signature="e#2007#2041#0" />
+            <element signature="docComment;method#addProd#0;class#Controller#0" />
+            <element signature="docComment;method#setItemTypeChb#0;class#Controller#0" />
+            <element signature="method#setItemTypeChb#0;class#Controller#0" />
+            <element signature="e#3675#3744#1" />
+            <element signature="method#setChQntCb#0;class#Controller#0" />
+            <element signature="method#setProductionLog#0;class#Controller#0" />
+            <element signature="e#4784#4785#0" expanded="true" />
+            <element signature="e#4803#4804#0" expanded="true" />
           </folding>
         </state>
       </provider>
