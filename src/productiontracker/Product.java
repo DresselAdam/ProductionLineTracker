@@ -7,10 +7,10 @@ package productiontracker;
  *
  * @author Adam Dressel
  */
-class Product implements Item {
+public class Product implements Item {
 
   // private int id;
-  private final ItemType type;
+  private ItemType type;
   private final String name;
   private final String manufacturer;
 
@@ -76,7 +76,7 @@ class Product implements Item {
    *
    * @return ItemType of this product.
    */
-  ItemType getType() {
+  public ItemType getType() {
     return type;
   }
 

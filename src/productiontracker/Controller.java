@@ -44,7 +44,7 @@ public class Controller {
   // Item type list used to populate combo box in products tab.
   private final ItemType[] itemTypes = ItemType.values();
   // List of products that are used to populate the Table View.
-  private final ObservableList<Product> productLine = FXCollections.observableArrayList();
+  private ObservableList<Product> productLine = FXCollections.observableArrayList();
   // Connection object used to set up the database.
   private Connection conn;
 
@@ -98,8 +98,6 @@ public class Controller {
   // Triggers warning in inspect code but I need parameter to trigger event.
   @FXML
   private void addProd(ActionEvent addProdEvent) {
-    System.out.println("Inserting records into the table...");
-
     String prodName = productNameTxt.getText();
     String manufacturer = manufacturerTxt.getText();
     String code = itemTypeChb.getSelectionModel().getSelectedItem();
@@ -116,15 +114,14 @@ public class Controller {
     try {
       // Uses of prepared statement to parameterize queries.
 
-
       String query = "INSERT INTO PRODUCT(NAME,TYPE,MANUFACTURER)" + " VALUES (?,?,?)";
 
       // Bug says the statement may not be closed in the event of an exception.
       pstmtUpdate = conn.prepareStatement(query);
 
       pstmtUpdate.setString(1, prodName);
-      pstmtUpdate.setString(2, manufacturer);
-      pstmtUpdate.setString(3, code);
+      pstmtUpdate.setString(2, code);
+      pstmtUpdate.setString(3, manufacturer);
       pstmtUpdate.executeUpdate();
 
       pstmtUpdate.close();

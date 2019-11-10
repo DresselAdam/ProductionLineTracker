@@ -26,3 +26,6 @@
 #productTable{
   -fx-background-color: #FFDA7B;
 }
+#warningLbl{
+  -fx-text-fill: red;
+}
