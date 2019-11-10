@@ -1,8 +1,6 @@
 package productiontracker;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -62,11 +60,9 @@ public class Controller {
 
     setChQntCb();
 
-    // setProductionLog();
     setProductLine();
     setProduceList();
-    // showProducts();
-
+    getDBProducts();
   }
 
   /**
@@ -167,13 +163,26 @@ public class Controller {
     chQntCb.getSelectionModel().selectFirst();
   }
 
-  // setProduction will be used for future database implementation.
-  /*private void setProductionLog() {
-    int testNum = 10;
-    Product testProduct = new AudioPlayer("test", "ProductTesters", "WAV", "MP3");
-    ProductionRecord testRecord = new ProductionRecord(testProduct, testNum);
-    productionLog.setText(testRecord.toString(testProduct));
-  }*/
+  /**
+   * Get DB products sets the productline fomr the database on startup. Products that can be
+   * produced are now accessed by the program from the database.
+   */
+  private void getDBProducts() {
+    try {
+      Statement selStmt = conn.createStatement();
+      String selection = "SELECT NAME, TYPE, MANUFACTURER FROM PRODUCT";
+      ResultSet selectRes = selStmt.executeQuery(selection);
+      while (selectRes.next()) {
+        String name = selectRes.getString("NAME");
+        String manufacturer = selectRes.getString("MANUFACTURER");
+        String code = selectRes.getString("TYPE");
+        Product selectedProd = new Product(name, code, manufacturer);
+        productLine.add(selectedProd);
+      }
+    } catch (Exception se) {
+      se.printStackTrace();
+    }
+  }
 
   /**
    * Method used when the Production is recorded. Gets the data from the list view observable list,

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Sprint 2 additions and changes.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Fixed a few bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/ProdDB.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/res/ProdDB.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res/ProdDB.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/res/ProdDB.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/productiontracker/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productiontracker/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/productiontracker/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/productiontracker/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/productiontracker/production_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/productiontracker/production_style.css" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,19 +110,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/productiontracker/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="173">
+              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
               <folding>
+                <element signature="docComment;class#Product#0" />
+                <element signature="e#422#635#0" />
                 <element signature="e#422#782#0" />
                 <element signature="e#786#1023#0" />
                 <element signature="e#1192#1425#0" />
                 <element signature="e#1974#2066#0" />
-                <element signature="e#2088#2089#0" expanded="true" />
-                <element signature="e#2109#2110#0" expanded="true" />
+                <element signature="e#2114#2174#0" />
                 <element signature="e#3446#3560#0" />
+                <element signature="e#3618#3678#0" />
                 <element signature="e#4012#4121#0" />
                 <element signature="e#4195#4384#0" />
                 <element signature="e#4195#4568#0" />
@@ -132,16 +133,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/productiontracker/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="171" column="49" lean-forward="true" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#783#816#0" expanded="true" />
-                <element signature="e#7024#7025#0" expanded="true" />
-                <element signature="e#7064#7065#0" expanded="true" />
+                <element signature="docComment;class#Controller#0" />
+                <element signature="docComment;method#initialize#0;class#Controller#0" />
+                <element signature="docComment;method#getDBProducts#0;class#Controller#0" />
+                <element signature="e#5794#5829#0" />
+                <element signature="docComment;method#recProd#0;class#Controller#0" />
+                <element signature="method#recProd#0;class#Controller#0" />
+                <element signature="e#6742#6902#1" />
+                <element signature="docComment;method#setProduceList#0;class#Controller#0" />
+                <element signature="e#6721#6762#1" />
               </folding>
             </state>
           </provider>
@@ -306,8 +312,8 @@
         <option value="$PROJECT_DIR$/src/productiontracker/Screen.java" />
         <option value="$PROJECT_DIR$/src/productiontracker/ProductionRecord.java" />
         <option value="$PROJECT_DIR$/src/productiontracker/production_style.css" />
-        <option value="$PROJECT_DIR$/src/productiontracker/Controller.java" />
         <option value="$PROJECT_DIR$/src/productiontracker/Product.java" />
+        <option value="$PROJECT_DIR$/src/productiontracker/Controller.java" />
       </list>
     </option>
   </component>
@@ -512,7 +518,7 @@
       <workItem from="1573013979929" duration="51000" />
       <workItem from="1573259537452" duration="5212000" />
       <workItem from="1573325724166" duration="20373000" />
-      <workItem from="1573425976530" duration="1291000" />
+      <workItem from="1573425976530" duration="4171000" />
     </task>
     <task id="LOCAL-00001" summary="initial re-commit">
       <created>1568672701060</created>
@@ -570,11 +576,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573359613212</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed a few bugs">
+      <created>1573427464642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573427464642</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127973000" />
+    <option name="totallyTimeSpent" value="130853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +602,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.23724696" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.23724696" />
       <window_info id="Favorites" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -621,7 +634,7 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="JetGradle" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3263158" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.3263158" />
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Maven" order="8" />
@@ -683,7 +696,8 @@
     <MESSAGE value="Added multiple issues to remote repo" />
     <MESSAGE value="Connected TableView and ListView to ObservableList" />
     <MESSAGE value="Sprint 2 additions and changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 2 additions and changes." />
+    <MESSAGE value="Fixed a few bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a few bugs" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -849,6 +863,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/productiontracker/production_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/productiontracker/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;class#Product#0" />
+            <element signature="e#422#635#0" />
+            <element signature="e#422#782#0" />
+            <element signature="e#786#1023#0" />
+            <element signature="e#1192#1425#0" />
+            <element signature="e#1974#2066#0" />
+            <element signature="e#2114#2174#0" />
+            <element signature="e#3446#3560#0" />
+            <element signature="e#3618#3678#0" />
+            <element signature="e#4012#4121#0" />
+            <element signature="e#4195#4384#0" />
+            <element signature="e#4195#4568#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://b6df5c21-77fe-4cb9-a21c-2b6722a4f8be/database/PRODDB/schema/PUBLIC/table/PRODUCT">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="f8d74ebe-a41e-4fbf-a83f-af64e821f1d1">
@@ -858,41 +900,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/productiontracker/production_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/productiontracker/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="171" column="49" lean-forward="true" selection-start-line="171" selection-start-column="49" selection-end-line="171" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#783#816#0" expanded="true" />
-            <element signature="e#7024#7025#0" expanded="true" />
-            <element signature="e#7064#7065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/productiontracker/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#422#782#0" />
-            <element signature="e#786#1023#0" />
-            <element signature="e#1192#1425#0" />
-            <element signature="e#1974#2066#0" />
-            <element signature="e#2088#2089#0" expanded="true" />
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#3446#3560#0" />
-            <element signature="e#4012#4121#0" />
-            <element signature="e#4195#4384#0" />
-            <element signature="e#4195#4568#0" />
+            <element signature="docComment;class#Controller#0" />
+            <element signature="docComment;method#initialize#0;class#Controller#0" />
+            <element signature="docComment;method#getDBProducts#0;class#Controller#0" />
+            <element signature="e#5794#5829#0" />
+            <element signature="docComment;method#recProd#0;class#Controller#0" />
+            <element signature="method#recProd#0;class#Controller#0" />
+            <element signature="e#6742#6902#1" />
+            <element signature="docComment;method#setProduceList#0;class#Controller#0" />
+            <element signature="e#6721#6762#1" />
           </folding>
         </state>
       </provider>

@@ -11,8 +11,8 @@ public class Product implements Item {
 
   // private int id;
   private ItemType type;
-  private final String name;
-  private final String manufacturer;
+  private String name;
+  private String manufacturer;
 
   /**
    * Basic constructor for this class.
