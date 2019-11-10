@@ -1,15 +1,22 @@
-package productionTracker;
+package productiontracker;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.util.ArrayList;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -17,8 +24,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
  *
  * @author Adam Dressel
  */
+@SuppressWarnings("WeakerAccess")
 public class Controller {
-
+  // Corresponds to all of the UI objects that are interactable in the program.
   @FXML private TextField productNameTxt;
   @FXML private TextField manufacturerTxt;
   @FXML private TextArea productionLog;
@@ -29,14 +37,15 @@ public class Controller {
   @FXML private TableColumn manCol;
   @FXML private TableColumn itemTypeCol;
   @FXML private ListView prodList;
+  @FXML private Button recProdBtn;
+  @FXML private Label warningLbl;
+  @FXML private ComboBox<Integer> chQntCb;
 
-  private ItemType[] ItemTypes = ItemType.values();
-  private ObservableList<Product> productLine = FXCollections.observableArrayList();
-
-  @FXML
-  // Combo box for the produce tab.
-  private ComboBox<Integer> chQntCb;
-
+  // Item type list used to populate combo box in products tab.
+  private final ItemType[] itemTypes = ItemType.values();
+  // List of products that are used to populate the Table View.
+  private final ObservableList<Product> productLine = FXCollections.observableArrayList();
+  // Connection object used to set up the database.
   private Connection conn;
 
   /**
@@ -44,15 +53,16 @@ public class Controller {
    * generated. All other methods are called from the initialize method.
    */
   public void initialize() {
-    setItemTypeChb(ItemTypes, itemTypeChb);
+    setItemTypeChb(itemTypes, itemTypeChb);
 
     initializeDatabase();
 
     productLineBtn.setOnAction(this::addProd);
+    recProdBtn.setOnAction(this::recProd);
 
     setChQntCb();
 
-    setProductionLog();
+    // setProductionLog();
     setProductLine();
     setProduceList();
     // showProducts();
@@ -80,21 +90,32 @@ public class Controller {
 
   /**
    * addProd method is used to insert products into the database. This is done through the UI by
-   * extracting the values for the textfields and choice box and using them in a prepared statement.
+   * extracting the values for the text fields and choice box and using them in a prepared
+   * statement. Also verifies that the fields are not empty.
    *
    * @param addProdEvent Signals a button event for the setOnAction method
    */
   // Triggers warning in inspect code but I need parameter to trigger event.
-  public void addProd(ActionEvent addProdEvent) {
-
+  @FXML
+  private void addProd(ActionEvent addProdEvent) {
     System.out.println("Inserting records into the table...");
+
     String prodName = productNameTxt.getText();
     String manufacturer = manufacturerTxt.getText();
-    String code = itemTypeChb.getValue();
+    String code = itemTypeChb.getSelectionModel().getSelectedItem();
+    if (code == null || manufacturer.length() == 0 || prodName.length() == 0) {
+      warningLbl.setText("Please fill in required fields.");
+      return;
+    } else {
+      warningLbl.setText("");
+    }
+
     Product addedProd = new Product(prodName, code, manufacturer);
     productLine.add(addedProd);
+    PreparedStatement pstmtUpdate;
     try {
-      PreparedStatement pstmtUpdate;
+      // Uses of prepared statement to parameterize queries.
+
 
       String query = "INSERT INTO PRODUCT(NAME,TYPE,MANUFACTURER)" + " VALUES (?,?,?)";
 
@@ -112,11 +133,16 @@ public class Controller {
     }
   }
 
+  /**
+   * Sets the values of the columns to the fields of the Product class. The TableView is then
+   * associated with the observable list product line and is updated when the list is changed
+   * automatically.
+   */
   private void setProductLine() {
-      prodNameCol.setCellValueFactory(new PropertyValueFactory("name"));
-      manCol.setCellValueFactory(new PropertyValueFactory("manufacturer"));
-      itemTypeCol.setCellValueFactory(new PropertyValueFactory("type"));
-      productTable.setItems(productLine);
+    prodNameCol.setCellValueFactory(new PropertyValueFactory("name"));
+    manCol.setCellValueFactory(new PropertyValueFactory("manufacturer"));
+    itemTypeCol.setCellValueFactory(new PropertyValueFactory("type"));
+    productTable.setItems(productLine);
   }
 
   /**
@@ -140,18 +166,37 @@ public class Controller {
     for (int choices = 1; choices <= 10; choices++) {
       chQntCb.getItems().add(choices);
     }
-    chQntCb.setEditable(true);
+    chQntCb.setEditable(false);
     chQntCb.getSelectionModel().selectFirst();
   }
 
-  private void setProductionLog() {
+  // setProduction will be used for future database implementation.
+  /*private void setProductionLog() {
     int testNum = 10;
     Product testProduct = new AudioPlayer("test", "ProductTesters", "WAV", "MP3");
     ProductionRecord testRecord = new ProductionRecord(testProduct, testNum);
     productionLog.setText(testRecord.toString(testProduct));
+  }*/
+
+  /**
+   * Method used when the Production is recorded. Gets the data from the list view observable list,
+   * as well as the combo box. A production record object is then created and put in the production
+   * log Text Area.
+   *
+   * @param recProdEvent Event used to listen for a button press.
+   */
+  private void recProd(@SuppressWarnings("unused") ActionEvent recProdEvent) {
+    ObservableList<Product> products = prodList.getItems();
+    Product selectedProd = products.get(prodList.getSelectionModel().getSelectedIndex());
+    int quantity = chQntCb.getSelectionModel().getSelectedItem();
+    for (int amtProduced = 0; amtProduced < quantity; amtProduced++) {
+      ProductionRecord product = new ProductionRecord(selectedProd, amtProduced);
+      productionLog.appendText(product.toString(selectedProd) + "\n");
+    }
   }
 
+  /** Sets the list view in the produce tab to the product line observable list. */
   private void setProduceList() {
-      prodList.setItems(productLine);
+    prodList.setItems(productLine);
   }
 }

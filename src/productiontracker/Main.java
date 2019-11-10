@@ -1,4 +1,4 @@
-package productionTracker;
+package productiontracker;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,9 +21,9 @@ public class Main extends Application {
 
     try {
       Parent root = FXMLLoader.load(getClass().getResource("trackerFormat.fxml"));
-      primaryStage.setTitle("Hello World");
+      primaryStage.setTitle("Production Line productiontracker");
       primaryStage.setScene(new Scene(root, 600, 550));
-      root.getStylesheets().add("productionTracker/production_style.css");
+      root.getStylesheets().add("productiontracker/production_style.css");
       primaryStage.show();
     } catch (Exception e) {
       e.printStackTrace();
@@ -32,6 +32,5 @@ public class Main extends Application {
 
   public static void main(String[] args) {
     launch(args);
-    testMultimedia.testMulti();
   }
 } // class main
