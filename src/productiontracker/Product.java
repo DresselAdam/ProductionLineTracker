@@ -1,5 +1,9 @@
 package productiontracker;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  * Primary Object used in this program. Product represents items that can be produced in the
  * production line tracker. Once product exists in the program, it can be used to create production
@@ -9,7 +13,7 @@ package productiontracker;
  */
 public class Product implements Item {
 
-  // private int id;
+  private int id;
   private ItemType type;
   private String name;
   private String manufacturer;
@@ -151,6 +155,26 @@ public class Product implements Item {
    */
   public String getManufacturer() {
     return this.manufacturer;
+  }
+
+  /** */
+  public int getProductId() {
+    int prodID = 0;
+    try {
+      Connection conn = Controller.conn;
+      Statement selectionStmt = conn.createStatement();
+      String selection = "SELECT ID, NAME, TYPE, MANUFACTURER FROM PRODUCT";
+      ResultSet selectRes = selectionStmt.executeQuery(selection);
+      while (selectRes.next()) {
+        if (this.getName().equals(selectRes.getString("NAME"))
+            && this.getManufacturer().equals(selectRes.getString("MANUFACTURER"))) {
+          prodID = selectRes.getInt("ID");
+        }
+      }
+    } catch (Exception se) {
+      se.printStackTrace();
+    }
+    return prodID;
   }
 
   /**

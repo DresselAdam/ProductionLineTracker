@@ -20,17 +20,24 @@ public class Main extends Application {
   public void start(Stage primaryStage) {
 
     try {
+      Parent empRoot = FXMLLoader.load(getClass().getResource("employee.fxml"));
+      primaryStage.setTitle("Employee Login");
+      primaryStage.setScene(new Scene(empRoot, 600, 300));
+      primaryStage.show();
+      /*
       Parent root = FXMLLoader.load(getClass().getResource("trackerFormat.fxml"));
       primaryStage.setTitle("Production Line productiontracker");
       primaryStage.setScene(new Scene(root, 600, 550));
       root.getStylesheets().add("productiontracker/production_style.css");
       primaryStage.show();
+
+       */
     } catch (Exception e) {
       e.printStackTrace();
     } // end try catch
   } // end start method
 
   public static void main(String[] args) {
-    launch(args);
+      launch(args);
   }
 } // class main

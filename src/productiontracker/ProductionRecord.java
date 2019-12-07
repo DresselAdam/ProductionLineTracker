@@ -9,27 +9,17 @@ import java.util.Date;
  */
 class ProductionRecord {
   // Soon: increment unique serial number based on item types in database.
-  private final int productionNumber;
+  private int productionNumber;
   private int productID;
   private final String serialNumber;
   private final Date dateProduced;
 
   @SuppressWarnings("unused")
-  ProductionRecord(int productID) {
-    this.productionNumber = 0;
-    this.serialNumber = "0";
-    this.dateProduced = new Date();
+  ProductionRecord(int productID, String serialNumber, Date dateProduced) {
+    this.productID = productID;
+    this.serialNumber = serialNumber;
+    this.dateProduced = dateProduced;
   }
-
-  // --Commented out by Inspection START (11/9/2019 10:46 PM):
-  //  ProductionRecord(int productionNumber, int productID, String serialNumber, Date dateProduced)
-  // {
-  //    this.dateProduced = dateProduced;
-  //    this.productionNumber = productionNumber;
-  //    this.productID = productID;
-  //    this.serialNumber = serialNumber;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 10:46 PM)
 
   /**
    * This constructor will be used to create a production record for a product and assign it a
@@ -49,7 +39,7 @@ class ProductionRecord {
     String typeCode = newProduct.getType().code;
     String uniqueNum = convertTypeNum(typeNum);
     this.serialNumber = manu + typeCode + uniqueNum;
-    this.productionNumber = 0;
+    this.productID = newProduct.getProductId();
     this.dateProduced = new Date();
   }
 
@@ -67,17 +57,26 @@ class ProductionRecord {
   /**
    * Will convert the product record information into a displayable format.
    *
-   * @param newProduct Product whose methods will be used to get corresponding field values
    * @return Will return the formatted String to caller.
    */
-  String toString(Product newProduct) {
-    return "Product Name: "
-        + newProduct.getName()
-        + " Product ID: "
+  public String toString() {
+    return " Product ID: "
         + this.productID
         + " Serial Num: "
         + this.serialNumber
         + " Date: "
         + this.dateProduced;
+  }
+
+  public int getProductID() {
+    return productID;
+  }
+
+  public String getSerialNumber() {
+    return serialNumber;
+  }
+
+  public Date getDateProduced() {
+    return dateProduced;
   }
 }

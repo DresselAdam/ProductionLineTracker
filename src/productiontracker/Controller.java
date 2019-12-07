@@ -1,6 +1,8 @@
 package productiontracker;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Observable;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,7 +26,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 @SuppressWarnings("WeakerAccess")
 public class Controller {
-  // Corresponds to all of the UI objects that are interactable in the program.
+  // Corresponds to all of the UI objects that are interactive in the program.
   @FXML private TextField productNameTxt;
   @FXML private TextField manufacturerTxt;
   @FXML private TextArea productionLog;
@@ -44,7 +46,7 @@ public class Controller {
   // List of products that are used to populate the Table View.
   private ObservableList<Product> productLine = FXCollections.observableArrayList();
   // Connection object used to set up the database.
-  private Connection conn;
+  public static Connection conn;
 
   /**
    * initialize method is the driver for the program. This method is called in main once the UI is
@@ -62,7 +64,8 @@ public class Controller {
 
     setProductLine();
     setProduceList();
-    getDBProducts();
+    loadProductList();
+    loadProductionLog();
   }
 
   /**
@@ -164,10 +167,10 @@ public class Controller {
   }
 
   /**
-   * Get DB products sets the productline fomr the database on startup. Products that can be
+   * loadProductList sets the productline fomr the database on startup. Products that can be
    * produced are now accessed by the program from the database.
    */
-  private void getDBProducts() {
+  private void loadProductList() {
     try {
       Statement selStmt = conn.createStatement();
       String selection = "SELECT NAME, TYPE, MANUFACTURER FROM PRODUCT";
@@ -195,9 +198,72 @@ public class Controller {
     ObservableList<Product> products = prodList.getItems();
     Product selectedProd = products.get(prodList.getSelectionModel().getSelectedIndex());
     int quantity = chQntCb.getSelectionModel().getSelectedItem();
+    ArrayList<ProductionRecord> productionRun = new ArrayList<ProductionRecord>();
     for (int amtProduced = 0; amtProduced < quantity; amtProduced++) {
-      ProductionRecord product = new ProductionRecord(selectedProd, amtProduced);
-      productionLog.appendText(product.toString(selectedProd) + "\n");
+      ProductionRecord record = new ProductionRecord(selectedProd, amtProduced);
+      productionRun.add(record);
+      // productionLog.appendText(product.toString(selectedProd) + "\n");
+    }
+    addDBProdRec(productionRun);
+    loadProductionLog();
+  }
+
+  /**
+   * Gets ProductionRecord objects from arrayList and adds them to the database.
+   * @param produced an arraylist of ProductionRecord objects
+   */
+  private void addDBProdRec(ArrayList<ProductionRecord> produced) {
+    PreparedStatement updateProdRec;
+    String insertQuery;
+    try {
+      for (ProductionRecord product : produced) {
+        insertQuery =
+            "INSERT INTO PRODUCTIONRECORD(PRODUCT_ID,SERIAL_NUM,DATE_PRODUCED)" + "VALUES(?,?,?)";
+        updateProdRec = conn.prepareStatement(insertQuery);
+
+        updateProdRec.setInt(1, product.getProductID());
+        updateProdRec.setString(2, product.getSerialNumber());
+        updateProdRec.setTimestamp(3, new Timestamp(product.getDateProduced().getTime()));
+
+        updateProdRec.executeUpdate();
+      }
+    } catch (Exception ee) {
+      ee.printStackTrace();
+    }
+  }
+
+  /**
+   * loadProductionLog gets items from the database and creates ProductionRecord objects from them.
+   */
+  private void loadProductionLog() {
+    ArrayList<ProductionRecord> productionLog = new ArrayList<ProductionRecord>();
+    try {
+      Statement selectRec = conn.createStatement();
+      String selectQuery = "SELECT PRODUCT_ID, SERIAL_NUM, DATE_PRODUCED FROM PRODUCTIONRECORD";
+      ResultSet selectRes = selectRec.executeQuery(selectQuery);
+      while (selectRes.next()) {
+        int prodID = selectRes.getInt("PRODUCT_ID");
+        String serial = selectRes.getString("SERIAL_NUM");
+        Timestamp date = selectRes.getTimestamp("DATE_PRODUCED");
+        ProductionRecord newRecord = new ProductionRecord(prodID, serial, date);
+        productionLog.add(newRecord);
+      }
+
+    } catch (Exception SE) {
+      SE.printStackTrace();
+    }
+    showProduction(productionLog);
+  }
+
+  /**
+   * showProduction displays ProductionRecord Objects to the textArea to display information.
+   *
+   * @param prodLog ProductionRecord Array list used to access the information from the
+   *     ProductionLog.
+   */
+  private void showProduction(ArrayList<ProductionRecord> prodLog) {
+    for (ProductionRecord record : prodLog) {
+      productionLog.appendText(record.toString() + "\n");
     }
   }
 
