@@ -9,6 +9,7 @@ This project is a production line tracker for a metaphorical production company.
 
 ## Diagrams
 ![Database Diagram](Database.png)
+![Class Diagram](ClassDiagram.png)
 
 ## Getting Started
 
