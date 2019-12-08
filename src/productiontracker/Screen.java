@@ -12,40 +12,40 @@ public class Screen implements ScreenSpec {
   private int refreshRate;
   private int responseTime;
 
-// --Commented out by Inspection START (11/9/2019 11:17 PM):
-//  /**
-//   * Used to create and produce Screen objects.
-//   *  */
-//  Screen() {
-//    this.resolution = "720x480";
-//    this.refreshRate = 40;
-//    this.responseTime = 22;
-//  }
-// --Commented out by Inspection STOP (11/9/2019 11:17 PM)
+  // --Commented out by Inspection START (11/9/2019 11:17 PM):
+  //  /**
+  //   * Used to create and produce Screen objects.
+  //   *  */
+  //  Screen() {
+  //    this.resolution = "720x480";
+  //    this.refreshRate = 40;
+  //    this.responseTime = 22;
+  //  }
+  // --Commented out by Inspection STOP (11/9/2019 11:17 PM)
 
-// --Commented out by Inspection START (11/9/2019 11:17 PM):
-//  /**
-//   * Get the String of this Screen's resolution.
-//   *
-//   * @return This screen's resolution.
-//   */
-//  @Override
-//  public String getResolution() {
-//    return this.resolution;
-//  }
-// --Commented out by Inspection STOP (11/9/2019 11:17 PM)
+  // --Commented out by Inspection START (11/9/2019 11:17 PM):
+  //  /**
+  //   * Get the String of this Screen's resolution.
+  //   *
+  //   * @return This screen's resolution.
+  //   */
+  //  @Override
+  //  public String getResolution() {
+  //    return this.resolution;
+  //  }
+  // --Commented out by Inspection STOP (11/9/2019 11:17 PM)
 
-// --Commented out by Inspection START (11/9/2019 11:17 PM):
-//  /**
-//   * Get the refresh rate as integer.
-//   *
-//   * @return This screen's refresh rate.
-//   */
-//  @Override
-//  public int getRefreshRate() {
-//    return this.refreshRate;
-//  }
-// --Commented out by Inspection STOP (11/9/2019 11:17 PM)
+  // --Commented out by Inspection START (11/9/2019 11:17 PM):
+  //  /**
+  //   * Get the refresh rate as integer.
+  //   *
+  //   * @return This screen's refresh rate.
+  //   */
+  //  @Override
+  //  public int getRefreshRate() {
+  //    return this.refreshRate;
+  //  }
+  // --Commented out by Inspection STOP (11/9/2019 11:17 PM)
 
   /**
    * Get the screen's response time.
@@ -69,5 +69,5 @@ public class Screen implements ScreenSpec {
         + this.refreshRate
         + "\nresponseTime: "
         + this.responseTime;
-  }
+}
 }

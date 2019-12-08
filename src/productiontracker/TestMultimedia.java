@@ -12,14 +12,11 @@ class TestMultimedia {
   /** Static method so test can be made by simply being called in Main. */
   public static void testMulti() {
 
-    AudioPlayer newAudioProduct =
-        new AudioPlayer(
-        );
+    AudioPlayer newAudioProduct = new AudioPlayer();
 
     Screen newScreen = new Screen();
 
-    MoviePlayer newMovieProduct =
-        new MoviePlayer(newScreen);
+    MoviePlayer newMovieProduct = new MoviePlayer(newScreen);
 
     // List created to show process of polymorphism in Java.
     ArrayList<MultimediaControl> productList = new ArrayList<>();

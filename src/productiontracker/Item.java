@@ -8,13 +8,13 @@ package productiontracker;
  */
 interface Item {
 
-  // --Commented out by Inspection (11/9/2019 10:44 PM):int getId();
+  int getId();
 
-  // --Commented out by Inspection (11/9/2019 10:44 PM):void setName(String name);
+  void setName(String name);
 
-  // --Commented out by Inspection (11/9/2019 10:44 PM):String getName();
+  String getName();
 
-  // --Commented out by Inspection (11/9/2019 10:44 PM):void setManufacturer(String manufacturer);
+  void setManufacturer(String manufacturer);
 
-  // --Commented out by Inspection (11/9/2019 10:44 PM):String getManufacturer();
+  String getManufacturer();
 }

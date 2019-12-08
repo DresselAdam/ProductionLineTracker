@@ -2,17 +2,47 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="productiontracker.EmployeeController">
-   <children>
-      <Button fx:id="signInBtn" layoutX="185.0" layoutY="248.0" mnemonicParsing="false" text="Sign In" onAction="#signIn"/>
-      <Button fx:id="acctBtn" layoutX="300.0" layoutY="248.0" mnemonicParsing="false" text="Create Account" />
-      <TextField fx:id="userField" layoutX="300.0" layoutY="104.0" />
-      <TextField fx:id="passField" layoutX="300.0" layoutY="159.0" />
-      <Label fx:id="userLbl" layoutX="185.0" layoutY="108.0" text="Username" />
-      <Label fx:id="passLbl" layoutX="185.0" layoutY="163.0" text="Password" />
-   </children>
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="signinTab" text="Employee Sign In">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="329.0">
+                            <children>
+                                <Button fx:id="signInBtn" layoutX="224.0" layoutY="234.0" mnemonicParsing="false" onAction="#signIn" text="Sign In" />
+                                <TextField fx:id="userField" layoutX="277.0" layoutY="112.0" text="ADressel" />
+                                <Label fx:id="userLbl" layoutX="122.0" layoutY="116.0" text="Username" />
+                                <Label fx:id="passLbl" layoutX="124.0" layoutY="177.0" text="Password" />
+                                <PasswordField fx:id="passField" layoutX="277.0" layoutY="173.0" text="Password!" />
+                                <Label fx:id="loginWarnLbl" layoutX="236.0" layoutY="95.0" textFill="RED" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="creatAcctTab" text="Create Account">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="nameCreatLbl" layoutX="110.0" layoutY="97.0" text="Your Name" />
+                                <Label fx:id="passCreatLbl" layoutX="101.0" layoutY="177.0" text="Your Password" />
+                                <TextField fx:id="nameCreateTf" layoutX="286.0" layoutY="93.0" />
+                                <PasswordField fx:id="passCreateTf" layoutX="286.0" layoutY="173.0" />
+                                <Button fx:id="acctBtn" layoutX="188.0" layoutY="248.0" mnemonicParsing="false" onAction="#createAcct" text="Create New Account" />
+                                <Label layoutX="30.0" layoutY="156.0" prefHeight="17.0" prefWidth="442.0" text="Password must contain : lowercase letter, uppercase letter, and a special character." textFill="RED" />
+                                <Label fx:id="empWarning" layoutX="143.0" layoutY="308.0" prefHeight="17.0" prefWidth="217.0" textFill="RED" />
+                                <Label layoutX="131.0" layoutY="76.0" text="Enter first and surname separated by a space" textFill="RED" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>

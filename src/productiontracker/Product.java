@@ -13,7 +13,6 @@ import java.sql.Statement;
  */
 public class Product implements Item {
 
-  private int id;
   private ItemType type;
   private String name;
   private String manufacturer;
@@ -84,49 +83,14 @@ public class Product implements Item {
     return type;
   }
 
-  // --Commented out by Inspection START (11/9/2019 10:45 PM):
-  //  /**
-  //   * Sets the type for this product.
-  //   *
-  //   * @param type Takes the an ItemType object to set for this product.
-  //   */
-  //  public void setType(ItemType type) {
-  //    this.type = type;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 10:45 PM)
-
-  // --Commented out by Inspection START (11/9/2019 10:52 PM):
-  //  /**
-  //   * Gets the id as an integer for this product.
-  //   *
-  //   * @return Returns the id of this product.
-  //   */
-  //  public int getId() {
-  //    return this.id;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 10:52 PM)
-
-  // --Commented out by Inspection START (11/9/2019 10:45 PM):
-  //  /**
-  //   * Sets the id for this product.
-  //   *
-  //   * @param id Takes an integer and sets this as the id.
-  //   */
-  //  public void setId(int id) {
-  //    this.id = id;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 10:45 PM)
-
-  // --Commented out by Inspection START (11/9/2019 11:15 PM):
-  //  /**
-  //   * Sets the name of this product.
-  //   *
-  //   * @param name Takes a String that will be assigned the name of the product.
-  //   */
-  //  public void setName(String name) {
-  //    this.name = name;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 11:15 PM)
+  /**
+   * Sets the name of this product.
+   *
+   * @param name Takes a String that will be assigned the name of the product.
+   */
+  public void setName(String name) {
+    this.name = name;
+  }
 
   /**
    * Gets the name of this product.
@@ -137,16 +101,14 @@ public class Product implements Item {
     return this.name;
   }
 
-  // --Commented out by Inspection START (11/9/2019 11:14 PM):
-  //  /**
-  //   * Sets the manufacturer of this product.
-  //   *
-  //   * @param manufacturer String that will be set as this product's manufacturer.
-  //   */
-  //  public void setManufacturer(String manufacturer) {
-  //    this.manufacturer = manufacturer;
-  //  }
-  // --Commented out by Inspection STOP (11/9/2019 11:14 PM)
+  /**
+   * Sets the manufacturer of this product.
+   *
+   * @param manufacturer String that will be set as this product's manufacturer.
+   */
+  public void setManufacturer(String manufacturer) {
+    this.manufacturer = manufacturer;
+  }
 
   /**
    * Gets the manufacturer of this product.
@@ -157,11 +119,16 @@ public class Product implements Item {
     return this.manufacturer;
   }
 
-  /** */
-  public int getProductId() {
+  /**
+   * Gets this product's id by reading from the sql database. The sql database auto-increments the
+   * product id.
+   *
+   * @return returns an integer representing the product id.
+   */
+  public int getId() {
     int prodID = 0;
     try {
-      Connection conn = Controller.conn;
+      Connection conn = EmployeeController.conn;
       Statement selectionStmt = conn.createStatement();
       String selection = "SELECT ID, NAME, TYPE, MANUFACTURER FROM PRODUCT";
       ResultSet selectRes = selectionStmt.executeQuery(selection);
@@ -171,6 +138,7 @@ public class Product implements Item {
           prodID = selectRes.getInt("ID");
         }
       }
+      selectionStmt.close();
     } catch (Exception se) {
       se.printStackTrace();
     }

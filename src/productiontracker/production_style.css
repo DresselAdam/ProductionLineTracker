@@ -1,31 +1,38 @@
 .button {
-  -fx-background-color: #FF9B7B;
-  -fx-text-fill: #FFD7CA
-}
-#plineGrid{
-  -fx-background-color: #FF9B7B;
-  -fx-border-color: black;
-}
-#itemTypeChb {
-  -fx-background-color: #FFD7CA;
-}
-.pane {
-  -fx-background-color: #5C96B5;
-  -fx-border-color: #5C96B5;
-}
-.tab-pane *.tab-header-background{
-  -fx-background-color: #BDDCEC;
-}
-.tab-pane{
-  -fx-background-color:#5C96B5 ;
+    -fx-background-color: #FF9B7B;
+    -fx-text-fill: #FFD7CA
 }
 
-.tab{
-  -fx-background-color: #88B9D3;
+#plineGrid {
+    -fx-background-color: #FF9B7B;
+    -fx-border-color: black;
 }
-#productTable{
-  -fx-background-color: #FFDA7B;
+
+#itemTypeChb {
+    -fx-background-color: #FFD7CA;
 }
-#warningLbl{
-  -fx-text-fill: red;
+
+.pane {
+    -fx-background-color: #5C96B5;
+    -fx-border-color: #5C96B5;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: #BDDCEC;
+}
+
+.tab-pane {
+    -fx-background-color: #5C96B5;
+}
+
+.tab {
+    -fx-background-color: #88B9D3;
+}
+
+#productTable {
+    -fx-background-color: #FFDA7B;
+}
+
+#warningLbl {
+    -fx-text-fill: red;
 }
