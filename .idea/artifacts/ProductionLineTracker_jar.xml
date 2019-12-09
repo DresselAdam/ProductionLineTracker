@@ -1,10 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="ProductionLineTracker:jar">
+  <artifact type="jar" build-on-make="true" name="ProductionLineTracker:jar">
     <output-path>$PROJECT_DIR$/</output-path>
     <root id="archive" name="ProductionLineTracker.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="ProductionLineTracker" />
       <element id="extracted-dir" path="C:/Program Files (x86)/H2/bin/h2-1.4.197.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/res/h2-1.4.197.jar" path-in-jar="/" />
