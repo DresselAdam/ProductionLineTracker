@@ -23,6 +23,8 @@ public class Main extends Application {
       Parent empRoot = FXMLLoader.load(getClass().getResource("employee.fxml"));
       primaryStage.setTitle("Employee Login");
       primaryStage.setScene(new Scene(empRoot, 600, 400));
+      empRoot.getStylesheets().add("productiontracker/production_style.css");
+
       primaryStage.show();
 
     } catch (Exception e) {
