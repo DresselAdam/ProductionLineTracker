@@ -33,7 +33,7 @@ Some welcome additions to be made:
 Adam Dressel
 
 # License
-
+![License](License.txt)
 
 # Acknowledgments
 geeksforgeeks.com
