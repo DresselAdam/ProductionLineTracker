@@ -66,7 +66,14 @@ and...
 Thank you to Professor Vanselow
 
 # Key Programming Concepts Utilized
-
+-   Object-Oriented Programming
+-   Object-Oriented Design
+-   Encapsulation
+-   Inheritance
+-   Database Programming
+-   Recursion
+-   Data Structures
+-   UI programming
 
 # History
 ## Sprint 1 (Alpha)
