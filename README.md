@@ -64,6 +64,10 @@ http://tutorials.jenkov.com/javafx/
 https://www.baeldung.com/java-pad-string
 and...
 Thank you to Professor Vanselow
+
+# Key Programming Concepts Utilized
+
+
 # History
 ## Sprint 1 (Alpha)
 
@@ -503,6 +507,3 @@ Week 15 Quality Review and Deployment
 Issue 10
 
 Make enhancements related to Human User Factors including Input and Output, Error Messages, and Software Robustness. Program should gracefully handle conditions like empty textboxes, strings input instead of numbers, missing database, missing jar, etc. 
-
-# Key Programming Concepts Utilized
-
