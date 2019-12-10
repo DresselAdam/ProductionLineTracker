@@ -1,32 +1,32 @@
 # Project Title
 This project is a production line tracker for a metaphorical production company. I made this independently over the course of three months. This project was developed for my object-oriented programming class at Florida Gulf Coast University. This was my first project with a fully integrated UI and database integration. Although this was a class assignment I did enjoy the challenges that came with molding UI and database all into one program. Forgive the visuals, I am not the greatest designer, but am proud of this program's functionality.
 
-## Demonstration
+# Demonstration
 ![Program Demo](demonstration.gif)
 
-## Documentation
+# Documentation
 ![JavaDoc](https://dresseladam.github.io/ProductionLineTracker/)
 
-## Diagrams
+# Diagrams
 ![Database Diagram](Database.png)
 ![Class Diagram](ClassDiagram.png)
 
-## Getting Started
+# Getting Started
 
 
-## Built With
+# Built With
 
 
-## Contributing
+# Contributing
 
 
-## Author
+# Author
 Adam Dressel
 
-## License
+# License
 
 
-## Acknowledgments
+# Acknowledgments
 geeksforgeeks.com
 docs.oracle.com
 https://www.tutorialspoint.com/javafx/
@@ -35,8 +35,8 @@ http://tutorials.jenkov.com/javafx/
 https://www.baeldung.com/java-pad-string
 and...
 Thank you to Professor Vanselow
-## History
-# Sprint 1 (Alpha)
+# History
+## Sprint 1 (Alpha)
 
 GUI, basic database
 
@@ -141,7 +141,7 @@ Week 5
         To show a default value, call the method getSelectionModel().selectFirst();
     Prepare for submission
 
-# Sprint 2 (Beta)
+## Sprint 2 (Beta)
 
 OOP
 
@@ -365,7 +365,7 @@ Show all Products in the Produce tab ListView.
     Use the selected item from the ListView as the item used to record production.
 
 Show the production log in the Production Log tab TextArea. 
-# Sprint 3 (Release)
+## Sprint 3 (Release)
 
 Full database integration and enhancements
 
@@ -475,5 +475,5 @@ Issue 10
 
 Make enhancements related to Human User Factors including Input and Output, Error Messages, and Software Robustness. Program should gracefully handle conditions like empty textboxes, strings input instead of numbers, missing database, missing jar, etc. 
 
-## Key Programming Concepts Utilized
+# Key Programming Concepts Utilized
 
