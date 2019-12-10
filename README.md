@@ -12,14 +12,23 @@ This project is a production line tracker for a metaphorical production company.
 ![Class Diagram](ClassDiagram.png)
 
 # Getting Started
-
+Download the zip file, or submit a pull request. Open on your preferred Java IDE and request to submit changes.
 
 # Built With
-
+    - Intellij IDEA
+    - JavaFX
+    - H2 Database
+    - JDBC
+    - Cascading Style Sheets
+    - FXML
+    - Gif Demo: ScreentoGif
 
 # Contributing
-
-
+Some welcome additions to be made:
+    -   UI/ Style improvements
+    -   Repetitive code simplification
+    -   Additional features: stats, employee integration, etc.
+    
 # Author
 Adam Dressel
 
