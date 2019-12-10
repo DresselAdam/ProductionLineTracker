@@ -5,7 +5,7 @@ This project is a production line tracker for a metaphorical production company.
 ![Program Demo](demonstration.gif)
 
 # Documentation
-![JavaDoc](https://dresseladam.github.io/ProductionLineTracker/)
+
 
 # Diagrams
 ![Database Diagram](Database.png)
